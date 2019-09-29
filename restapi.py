@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from scraper import Scraper
 import os
 from flask_cors import CORS, cross_origin
-
+from os import environ
 # Init app
 
 app = Flask(__name__)
@@ -34,4 +34,4 @@ def get_news(keyword):
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(environ.get('PORT'))
