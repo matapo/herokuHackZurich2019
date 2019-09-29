@@ -1,1 +1,1 @@
-web: python restapi.py
+python restapi.py
